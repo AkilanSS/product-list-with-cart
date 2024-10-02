@@ -20,7 +20,7 @@ body{
 
     display: grid;
     grid-template-columns: repeat(3, 240px);
-    grid-template-rows: repeat(3, 330px);
+    grid-template-rows: repeat(auto, 330px);
     gap: 20px;
 
 }
@@ -222,4 +222,21 @@ hr {
     margin: 5px 30px;
     padding: 0;
     color: hsl(14, 65%, 9%);
+}
+
+@media (max-width: 767px) {
+    #menu-ctn{
+        grid-template-columns: repeat(1, 240px);
+        
+    }
+
+    body{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    #menu-ctn{
+        grid-template-columns: repeat(2, 240px);
+    }
 }
